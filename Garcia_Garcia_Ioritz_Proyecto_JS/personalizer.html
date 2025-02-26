@@ -11,7 +11,39 @@
             <div class="barraMenu">
                 <nav>
                     <ul>
-                        <li><button onclick=""><b>Personalizer</b></button></li>
+                        <li><button onclick="funcionMenu()" class="despMnu"><b>Personalizer</b></button>
+                        <div id="mnu1" class="mnu2">
+                            <label id="clrLbl">Bg_color</label>
+                                <div>
+                                    <div class="eljColor" style="background: #e08997;" onclick="cambiarColor('#e08997')"></div>
+                                    <div class="eljColor" style="background: #9df69b;" onclick="cambiarColor('#9df69b')"></div>
+                                    <div class="eljColor" style="background: #a7d1fe;" onclick="cambiarColor('#a7d1fe')"></div>
+                                    <div class="eljColor" style="background: #6a6868;" onclick="cambiarColor('#6a6868')"></div>
+                                    <div class="eljColor" style="background: #bcb7b7;" onclick="cambiarColor('#bcb7b7')"></div>
+                                </div>
+                            <label id="clrLbl">Change_letters</label>
+                                <div>
+                                    <div class="eljColor" style="background: #ff002b;" onclick="cambiarColorLetras('#ff002b')"></div>
+                                    <div class="eljColor" style="background: #036a02;" onclick="cambiarColorLetras('#036a02')"></div>
+                                    <div class="eljColor" style="background: #0d48eb;" onclick="cambiarColorLetras('#0d48eb')"></div>
+                                    <div class="eljColor" style="background: #000000;" onclick="cambiarColorLetras('#000000')"></div>
+                                    <div class="eljColor" style="background: #ffffff;" onclick="cambiarColorLetras('#ffffff')"></div>
+                                </div>
+                                <div>
+                                    <div class="eljTamaño" style="background: #edeaea;" onclick="cambiarTamañoLetras('12px')">XS</div>
+                                    <div class="eljTamaño" style="background: #edeaea;" onclick="cambiarTamañoLetras('15px')">S</div>
+                                    <div class="eljTamaño" style="background: #edeaea;" onclick="cambiarTamañoLetras('20px')">M</div>
+                                    <div class="eljTamaño" style="background: #edeaea;" onclick="cambiarTamañoLetras('25px')">L</div>
+                                    <div class="eljTamaño" style="background: #edeaea;" onclick="cambiarTamañoLetras('30px')">XL</div>
+                                </div>
+                                <div>
+                                    <div class="eljTpoLta" style="background: #edeaea;" onclick="cambiarTipoLetra('Arial')">A</div>
+                                    <div class="eljTpoLta" style="background: #edeaea;" onclick="cambiarTipoLetra('Times New Roman')">T</div>
+                                    <div class="eljTpoLta" style="background: #edeaea;" onclick="cambiarTipoLetra('Calibri')">C</div>
+                                    <div class="eljTpoLta" style="background: #edeaea;" onclick="cambiarTipoLetra('Verdana')">F</div>
+                                    <div class="eljTpoLta" style="background: #edeaea;" onclick="cambiarTipoLetra('Monospace')">M</div>
+                                </div>
+                        </div></li>
                         <li><button onclick=""><a href="form.html">Form</a></button></li>
                         <li><button onclick=""><a href="images.html">Images</a></button></li>
                     </ul>
@@ -20,9 +52,9 @@
         </header>
 
         <div class="w1">
-            <h1>Welcome to Personalizer</h1>
+            <h1>Welcome to Personalizer</h1><br>
             <p>This is a paragraph that you can adapt its content.<br>
-
+            <br>
             Click to Personalizer banner.</p>
         </div>
     </body>

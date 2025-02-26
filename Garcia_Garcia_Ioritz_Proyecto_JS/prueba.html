@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable - Personalización</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background 0.3s, font-size 0.3s;
+        }
+        .menu-container {
+            position: relative;
+            display: inline-block;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 220px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .btn {
+            padding: 10px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .color-box {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .color-box:hover {
+            border: 2px solid black;
+        }
+        .size-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .size-option {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 2px solid transparent;
+        }
+        .size-option:hover {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-container">
+    <button class="btn" onclick="toggleMenu()">☰ Personalizar</button>
+    <div class="menu" id="menu">
+        <label>Color de Fondo:</label>
+        <div>
+            <div class="color-box" style="background: #FF5733;" onclick="cambiarColor('#FF5733')"></div>
+            <div class="color-box" style="background: #33FF57;" onclick="cambiarColor('#33FF57')"></div>
+            <div class="color-box" style="background: #3357FF;" onclick="cambiarColor('#3357FF')"></div>
+            <div class="color-box" style="background: #F1C40F;" onclick="cambiarColor('#F1C40F')"></div>
+        </div>
+
+        <label>Tamaño de Letra:</label>
+        <div class="size-box">
+            <div class="size-option" style="font-size: 14px;" onclick="cambiarTamaño('14px')">A</div>
+            <div class="size-option" style="font-size: 18px;" onclick="cambiarTamaño('18px')">A</div>
+            <div class="size-option" style="font-size: 24px;" onclick="cambiarTamaño('24px')">A</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+
+    function cambiarColor(color) {
+        document.body.style.backgroundColor = color;
+    }
+
+    function cambiarTamaño(size) {
+        document.body.style.fontSize = size;
+    }
+
+    // Cierra el menú si se hace clic fuera de él
+    window.onclick = function(event) {
+        if (!event.target.closest('.menu-container')) {
+            document.getElementById("menu").style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
