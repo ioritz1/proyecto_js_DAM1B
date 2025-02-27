@@ -64,7 +64,32 @@ function cambiarTipoLetra(tipo) {
 
 
 /* JS de images */
+/*
+const imgManual = document.getElementById("img1")
+        const imgAuto = document.getElementById("img2")
+        let numManual = 1;
+        let numAuto = 1;
 
-function cambiarImagen() {
+        function cambiarImagen(){
+        imgManual.src = `imagenes/${numManual}.jpg`;
+        imgManual.style.height = "100px";
+        imgManual.style.width = "100px";
 
-}
+        if (numManual == 5){
+        numManual = 1;
+        } else {
+        numManual+=1;
+        }
+
+        }
+
+        setInterval(() => {
+        imgAuto.src = `imagenes/${numAuto}.jpg`;
+        imgAuto.style.height = "100px";
+        imgAuto.style.width = "100px";
+        if (numAuto == 5){
+        numAuto = 1;
+        } else {
+        numAuto+=1;
+        }
+        }, 100); */

@@ -22,14 +22,51 @@
         
         <div class="estiloImages">
             <div id="imgsDiv">
-                <pre>Magic Button: Create & Change Image <br>
-<button id="bttn" onclick="cambiarImagen()">Change Image!</button>
-<img id="img" src=""></pre>
+                <pre id="imgsPre">Magic Button: Create & Change Image <br>
+<button id="bttn" onclick="cambiarImagen()">Change Image!</button><br>
+<img id="img1" src=""></pre>
             </div>
             <div id="imgsDiv2">
-                <p>AutoLoading</p>
+                <pre>AutoLoading<br>
+<img id="img2" src=""></pre>
 
             </div>
         </div>
     </body>
+
+
+
+
+    <!-- JS de images -->
+    <script>
+        const imgManual = document.getElementById("img1")
+        const imgAuto = document.getElementById("img2")
+        let numManual = 1;
+        let numAuto = 1;
+
+        function cambiarImagen(){
+            imgManual.src = `imagenes/${numManual}.jpg`;
+            imgManual.style.height = "150px";
+            imgManual.style.width = "150px";
+
+        if (numManual == 5) {
+            numManual = 1;
+        } else {
+            numManual+=1;
+        }
+
+        }
+
+        setInterval(() => {
+            imgAuto.src = `imagenes/${numAuto}.jpg`;
+            imgAuto.style.height = "150px";
+            imgAuto.style.width = "150px";
+
+        if (numAuto == 5) {
+            numAuto = 1;
+        } else {
+            numAuto+=1;
+        }
+        }, 100);
+    </script>
 </html>
