@@ -1,3 +1,4 @@
+/* Funcion que permite abrir y mostrar el menu desplegable de la barra de busqueda */
 function funcionMenu() {
     document.getElementById("mnu1").classList.toggle("show");
 }
@@ -15,20 +16,18 @@ window.onclick = function(event) {
     }
 }
 
-
-
 /* seleccion de color de fondo */
 function cambiarColor(color) {
     document.body.style.background = color;
-}
+} 
 
-/* sellecion de color de letras */
+/* selecion de color de letras */
 function cambiarColorLetras(color) {
-    let b1 = document.getElementsByClassName("w1")[0]; 
+    let b1 = document.getElementsByClassName("w1")[0]; // Selecciona el primer div con la clase "w1"
     if (b1) {
         b1.style.color = color;
     }
-}
+} 
 
 /* seleccion de tamaño de letras */
 function cambiarTamañoLetras(tamaño) {
@@ -44,4 +43,28 @@ function cambiarTipoLetra(tipo) {
     if (b1) {
         b1.style.fontFamily = tipo;
     }
+} 
+
+/* Funcion para poner el modo oscuro o claro segun el color de fondo actual */
+/* la funcion de cambiar tamaño de letras interviene en la correcta ejecucion de esta otra (por la cara xD)
+    function clrFondo() {
+        let colorActual = getComputedStyle(document.body).backgroundColor;
+        
+        if (colorActual === "rgb(0, 0, 0)") { // Si el fondo es negro
+            document.body.style.backgroundColor = "white";
+        } else {
+            document.body.style.backgroundColor = "black";
+        }
+    }
+*/
+
+
+
+/* JS del formulario */
+
+
+/* JS de images */
+
+function cambiarImagen() {
+
 }

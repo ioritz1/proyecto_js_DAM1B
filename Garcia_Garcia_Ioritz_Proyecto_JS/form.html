@@ -3,10 +3,10 @@
     <head>
         <title>Images</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="javas.js" defer></script>
     </head>
     <body>
-        <script src="javas.js"></script>
-        
+        <!-- Barra de opciones con la opcion de mode -->  
         <header>
             <div class="barraMenu2">
                 <nav>
@@ -14,10 +14,66 @@
                         <li><button onclick=""><a href="personalizer.html">Personalizer</a></button></li>
                         <li><button onclick=""><a href="form.html">Form</a></button></li>
                         <li><button onclick=""><a href="images.html">Images</a></button></li>
-                        <li><button onclick=""><b>Mode</b></button></li>
+                        <li><button id="mode" onclick="clrFondo()">Mode</button></li>
                     </ul>
                 </nav>
             </div>
         </header>
+
+        <div class="form-container-custom">
+            <form id="registroFormCustom">
+                <!-- Nombre completo -->
+                <label for="fullNameCustom" class="label-custom">Full Name:</label>
+                <input type="text" id="fullNameCustom" name="fullNameCustom" class="input-custom" placeholder="Enter your full name" required>
+    
+                <!-- Email -->
+                <label for="emailCustom" class="label-custom">Email:</label>
+                <input type="email" id="emailCustom" name="emailCustom" class="input-custom" placeholder="Enter your email" required>
+                <div id="emailError" class="error-message" style="display:none;"></div> <!-- Mensaje de error -->
+                
+                <!-- Boton de validacion -->
+                <button type="button" class="button-custom" onclick="validarFormularioCustom()">Validate</button>
+    
+                <!-- Generos -->
+                <label for="genderCustom" class="label-custom">Gender:</label>
+                <div class="gender-container-custom">
+                    <label>
+                        <input type="radio" id="maleCustom" name="genderCustom" value="male" class="gender-radio-custom" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" id="femaleCustom" name="genderCustom" value="female" class="gender-radio-custom" required> Female
+                    </label>
+                    <label>
+                        <input type="radio" id="otherCustom" name="genderCustom" value="other" class="gender-radio-custom" required> Other
+                    </label>
+                </div>
+    
+                <!-- Lugar -->
+                <label for="countryCustom" class="label-custom">Country:</label>
+                <select id="countryCustom" name="countryCustom" class="select-custom" required onchange="mostrarProvincia()">
+                    <option value="">Select your country</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="spain">Spain</option>
+                </select>
+    
+                <!-- Provincia -->
+                <label for="provinceCustom" class="label-custom" id="provinceLabel" style="display:none;">Province:</label>
+                <select id="provinceCustom" name="provinceCustom" class="select-custom" style="display:none;" onchange="mostrarCiudad()">
+                    <option value="">Select your province</option>
+                </select>
+    
+                <!-- Ciudad -->
+                <label for="townCustom" class="label-custom" id="townLabel" style="display:none;">Town:</label>
+                <select id="townCustom" name="townCustom" class="select-custom" style="display:none;">
+                    <option value="">Select your town</option>
+                </select>
+    
+                <!-- Boton de enviar -->
+                <button type="submit" class="button-custom">Send</button>
+            </form>
+        </div>
+
     </body>
 </html>

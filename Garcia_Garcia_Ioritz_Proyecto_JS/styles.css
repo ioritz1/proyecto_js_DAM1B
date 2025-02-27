@@ -4,10 +4,9 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: white;
-}
+body{ background-color: white; }
 
+/* barra de busqueda */
 .barraMenu{
     width: 400px;
     margin: auto;
@@ -27,9 +26,7 @@ header{
 
 }
 
-nav{
-    float: center;
-}
+nav{ float: center; }
 
 nav ul li {
     list-style: none;
@@ -51,22 +48,14 @@ button {
     font-size: 20px;
 }
 
-/* texto del body (el que tiene que cambiar) */
-.w1 {
-    margin-top: 65px;
-    margin-left: 40px;
+/* estilo del boton de mode */
+#mode {
+    color: white;
+    font-weight: bold;
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
 }
-
-
-
-
-/*texto del menu desplegable */
-#clrLbl{ 
-    color: black;
-    font-size: 20px;
-}
-
-
 
 /* boton de personalizer*/
 .despMnu{ 
@@ -76,19 +65,34 @@ button {
     cursor: pointer;
 }
 
+/* texto del body (el que tiene que cambiar) */
+.w1 {
+    margin-top: 65px;
+    margin-left: 40px;
+}
+
+/* Menu desplegable */
+/*texto del menu desplegable */
+#clrLbl{ 
+    color: black;
+    font-size: 20px;
+}
+
 /* no se que hace, revisar mas tarde
 .despMnu:hover, .despMnu:focus {
     background-color: gray;
-  } */
-  
-  /* The container <div> - needed to position the dropdown content */
-  .despMnu {
+} */
+
+
+/* The container <div> - needed to position the dropdown content */
+/* parece que no hace nada, revisar mas tarde
+.despMnu {
     position: relative;
     display: inline-block;
-  }
+} */
   
-  /* area del menu desplegable */
-  .mnu2{
+/* area del menu desplegable */
+.mnu2 {
     display: none;
     position: absolute;
     background-color: #ffffff;
@@ -96,20 +100,19 @@ button {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 5px;
-  }
+}
   
-  /* Links inside the dropdown */
-  /* parece que no hace nada, revisar más tarde
-  .mnu2 button {
+/* Links inside the dropdown */
+/* parece que no hace nada, revisar más tarde
+.mnu2 button {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  } */
-  
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
+} */
+
+/* Muestra el menu desplegable */
+.show { display:block; }
 
 /* cuadrados de seleccion de tamaño/tipo/color de letra y color de fondo*/
 .eljTamaño, .eljTpoLta, .eljColor {
@@ -124,5 +127,133 @@ button {
     font-size: 13px;
 }
 
+/* cuadrados de dentro del menu desplegable */
+.eljColor:hover, .eljTamaño:hover, .eljTpoLta:hover { 
+    transform: scaleY(1.2);
+    border-color: rgb(97, 235, 97);
+}
 
-.eljColor:hover, .eljTamaño:hover, .eljTpoLta:hover { transform: scale(1.1);}
+
+
+
+
+/* Estilo del formulario */
+.form-container-custom {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 640px;
+    margin: 0 auto;
+}
+
+.label-custom {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-custom, .select-custom, .button-custom {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.button-custom {
+    background-color: #adadad;
+    color: black;
+    border: solid 1px rgb(90, 90, 90);
+    cursor: pointer;
+}
+
+.button-custom:hover {
+    background-color: #797979;
+}
+
+/* Estilos específicos para los botones de radio */
+.gender-container-custom {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 15px;
+}
+
+.gender-container-custom label {
+    display: flex;
+    align-items: center;
+}
+
+.gender-container-custom input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Correo no valido */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Correo valido */
+.correct-message {
+    color: green;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+
+
+/* Estilos de la pagina de images */
+.estiloImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#imgsDiv, #imgsDiv2 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(67, 108, 221);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-shadow: 0 4px 8px rgb(179, 179, 179);
+    border-radius: 10px;
+
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 2%;
+}
+
+#imgsDiv {
+    width: 1000px;
+    height: 200px;
+}
+
+#imgsDiv2 {
+    width: 1000px;
+    height: 350px;
+}
+
+#bttn {
+    background-color: #d8d6d6;
+    color: black;
+    border-radius: 5px;
+    border: solid 1px rgb(133, 133, 133);
+    width: 150px;
+    height: 30px;
+}
+
+/* Modificadores del boton, cuando pasas el cursor por encima y cuando clickas */
+#bttn:hover { background-color: #bbbbbb; }
+#bttn:active { background-color: #9b9b9b; }
+
+#img {
+    width: 40px;
+    height: 50px;
+}

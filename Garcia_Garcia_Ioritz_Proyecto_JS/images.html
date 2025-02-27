@@ -3,10 +3,10 @@
     <head>
         <title>Images</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="javas.js"></script>
     </head>
     <body>
-        <script src="javas.js"></script>
-        
+        <!-- Barra de opciones con la opcion de mode --> 
         <header>
             <div class="barraMenu2">
                 <nav>
@@ -14,10 +14,22 @@
                         <li><button onclick=""><a href="personalizer.html">Personalizer</a></button></li>
                         <li><button onclick=""><a href="form.html">Form</a></button></li>
                         <li><button onclick=""><a href="images.html">Images</a></button></li>
-                        <li><button onclick=""><b>Mode</b></button></li>
+                        <li><button id="mode" onclick="">Mode</button></li>
                     </ul>
                 </nav>
             </div>
         </header>
+        
+        <div class="estiloImages">
+            <div id="imgsDiv">
+                <pre>Magic Button: Create & Change Image <br>
+<button id="bttn" onclick="cambiarImagen()">Change Image!</button>
+<img id="img" src=""></pre>
+            </div>
+            <div id="imgsDiv2">
+                <p>AutoLoading</p>
+
+            </div>
+        </div>
     </body>
 </html>
