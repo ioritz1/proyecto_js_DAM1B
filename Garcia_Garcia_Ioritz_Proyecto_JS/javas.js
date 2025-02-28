@@ -46,8 +46,8 @@ function cambiarTipoLetra(tipo) {
 } 
 
 /* Funcion para poner el modo oscuro o claro segun el color de fondo actual */
-/* la funcion de cambiar tamaño de letras interviene en la correcta ejecucion de esta otra (por la cara xD)
-    function clrFondo() {
+/* la funcion de cambiar tamaño de letras interviene en la correcta ejecucion de esta otra (por la cara xD) */
+    /* function clrFondo() {
         let colorActual = getComputedStyle(document.body).backgroundColor;
         
         if (colorActual === "rgb(0, 0, 0)") { // Si el fondo es negro
@@ -55,15 +55,11 @@ function cambiarTipoLetra(tipo) {
         } else {
             document.body.style.backgroundColor = "black";
         }
-    }
-*/
+} */
 
+/* El JS del formulario esta aparte ya que da errores*/
 
-
-/* JS del formulario */
-
-
-/* JS de images */
+/* El JS de images esta en el propio html de images xq da errores */
 /*
 const imgManual = document.getElementById("img1")
         const imgAuto = document.getElementById("img2")

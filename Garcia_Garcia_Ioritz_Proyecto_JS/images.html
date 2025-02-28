@@ -14,7 +14,7 @@
                         <li><button onclick=""><a href="personalizer.html">Personalizer</a></button></li>
                         <li><button onclick=""><a href="form.html">Form</a></button></li>
                         <li><button onclick=""><a href="images.html">Images</a></button></li>
-                        <li><button id="mode" onclick="">Mode</button></li>
+                        <li><button id="mode" onclick="clrFondo()">Mode</button></li>
                     </ul>
                 </nav>
             </div>
@@ -68,5 +68,29 @@
             numAuto+=1;
         }
         }, 100);
+
+
+/* Funcion para poner el modo oscuro o claro segun el color de fondo actual y cambiar parametros adicionales */
+    function clrFondo() {
+        let colorActual = getComputedStyle(document.body).backgroundColor;
+        
+        if (colorActual === "rgb(0, 0, 0)") { // Si el fondo es negro
+    document.body.style.backgroundColor = "white";
+    document.getElementById("mode").innerHTML = "Light";
+    document.getElementById("imgsDiv").style.backgroundColor = "rgb(255, 255, 255)";
+    document.getElementById("imgsDiv2").style.backgroundColor = "rgb(255, 255, 255)";
+    document.getElementById("imgsDiv").style.boxShadow = "0 4px 8px rgb(179, 179, 179)";
+    document.getElementById("imgsDiv2").style.boxShadow = "0 4px 8px rgb(179, 179, 179)";
+} else {
+    document.body.style.backgroundColor = "black";
+    document.getElementById("mode").innerHTML = "Dark";
+    document.getElementById("imgsDiv").style.backgroundColor = "rgb(71, 71, 71)";
+    document.getElementById("imgsDiv2").style.backgroundColor = "rgb(71, 71, 71)";
+    document.getElementById("imgsDiv").style.boxShadow = "none";
+    document.getElementById("imgsDiv2").style.boxShadow = "none";
+}
+
+}
+
     </script>
 </html>
